@@ -2,6 +2,7 @@
 
 var del = require('del');
 var gulp = require('gulp');
+var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync').create();
 
 // 清理构建输出
@@ -29,8 +30,15 @@ gulp.task('build:parasitifer', function(){
 
 // 构建模板
 gulp.task('build:templates', function(){
-    return gulp.src('./src/templates/**')
-        .pipe(gulp.dest('./dist/templates/fullscreenbar'));
+    var dest = './dist/templates/fullscreenbar',
+        js = dest + '/js';
+    gulp.src('./src/templates/js/directives/**')
+        .pipe($.concat('directives.js'))
+        .pipe(gulp.dest(js));
+    gulp.src(['./src/templates/js/angular.js'], { base: './src/templates' })
+        .pipe(gulp.dest(dest));
+    return gulp.src(['./src/templates/template.json', './src/templates/css/**', './src/templates/images/**'], { base: './src/templates' })
+        .pipe(gulp.dest(dest));
 });
 
 // 复制数据服务桩文件

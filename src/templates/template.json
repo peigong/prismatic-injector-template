@@ -4,6 +4,7 @@
     "scripts": [
         "js/settings.js",
         "js/angular.js",
+        "js/directives.js",
         "js/ui-core.js",
         "js/component/services.js",
         "js/pages/templates.js",
