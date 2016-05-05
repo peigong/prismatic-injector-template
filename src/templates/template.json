@@ -4,9 +4,9 @@
     "scripts": [
         "js/settings.js",
         "js/angular.js",
+        "js/filters.js",
         "js/directives.js",
         "js/ui-core.js",
-        "js/component/services.js",
         "js/pages/templates.js",
         "js/lstore.js",
         "js/insert.js"

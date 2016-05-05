@@ -32,8 +32,17 @@ gulp.task('build:parasitifer', function(){
 gulp.task('build:templates', function(){
     var dest = './dist/templates/fullscreenbar',
         js = dest + '/js';
+    gulp.src('./src/templates/js/filters/**')
+        .pipe($.concat('filters.js'))
+        .pipe(gulp.dest(js));
+    gulp.src('./src/templates/js/factories/**')
+        .pipe($.concat('factories.js'))
+        .pipe(gulp.dest(js));
     gulp.src('./src/templates/js/directives/**')
         .pipe($.concat('directives.js'))
+        .pipe(gulp.dest(js));
+    gulp.src('./src/templates/js/services/**')
+        .pipe($.concat('services.js'))
         .pipe(gulp.dest(js));
     gulp.src(['./src/templates/js/angular.js'], { base: './src/templates' })
         .pipe(gulp.dest(dest));
