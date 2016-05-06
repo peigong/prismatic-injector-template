@@ -185,8 +185,3 @@ function($window, $interval) {
     };
 }
 ]);
-/*
-iradioselectiondiv: component for customized radio selection Box.
-setSelectionValue(): method used to get the data from serivce. need to fire once data got received though event chain.
- $scope.compData.JS.selectedValue : gives selected value.
-*/

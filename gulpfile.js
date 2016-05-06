@@ -7,7 +7,7 @@ var browserSync = require('browser-sync').create();
 
 // 清理构建输出
 gulp.task('clean', function(){
-    del(['template.md', './dist/**']);
+    del.sync(['template.md', './dist/**']);
 });
 
 // 复制模板开发规范
@@ -44,7 +44,17 @@ gulp.task('build:templates', function(){
     gulp.src('./src/templates/js/services/**')
         .pipe($.concat('services.js'))
         .pipe(gulp.dest(js));
-    gulp.src(['./src/templates/js/angular.js'], { base: './src/templates' })
+    gulp.src('./src/templates/js/controllers/**')
+        .pipe($.concat('controllers.js'))
+        .pipe(gulp.dest(js));
+    gulp.src([
+        './src/templates/js/angular.js',
+        './src/templates/js/insert.js',
+        './src/templates/js/lstore.js',
+        './src/templates/js/settings.js',
+        './src/templates/js/ui-core.js',
+        './src/templates/js/pages/templates.js'
+    ], { base: './src/templates' })
         .pipe(gulp.dest(dest));
     return gulp.src(['./src/templates/template.json', './src/templates/css/**', './src/templates/images/**'], { base: './src/templates' })
         .pipe(gulp.dest(dest));
