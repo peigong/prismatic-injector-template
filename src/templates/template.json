@@ -2,15 +2,16 @@
     "name": "fullscreenbar",
     "description": "angular实现的演示DEMO",
     "scripts": [
-        "js/settings.js",
         "js/angular.js",
+        "js/settings.js",
+        "js/config.js",
         "js/ui-core.js",
         "js/filters.js",
         "js/directives.js",
         "js/services.js",
         "js/factories.js",
         "js/controllers.js",
-        "js/pages/templates.js",
+        "js/templates.js",
         "js/lstore.js",
         "js/insert.js"
     ],
