@@ -1,0 +1,47 @@
+{
+    "respparam": {
+        "taskId": "9",
+        "advertisement": {
+            "minprioritylist": [{
+                "title": "预存服务费，享双重壕礼！",
+                "weblink": "http://service.bj.10086.cn/m/p/360jdh/toolbar",
+                "priority": 2,
+                "description": "10M宽带免费升至20M，还送互联网电视机顶盒！   ",
+                "CONTENTID": "329",
+                "iconurl": "http://toolbar.url.bi/Public/tb/images/app/_meitu_1_icon_1457425339455.jpg",
+                "imageurl": "http://toolbar.url.bi/Public/tb/images/app/_meitu_1_image_1457425334401.jpg",
+                "linktype": "0"
+            },
+            {
+                "title": "精品内容抢先看",
+                "weblink": "http://share.migu.cn/h5/api/migu/h5/getSsoNoLogin?type=1&key=dc78304ff97642ac716c30fcf0321f9e&channelId=1380050800000",
+                "priority": 3,
+                "description": "精品内容全免费，周周不同，月月精彩！",
+                "CONTENTID": "330",
+                "iconurl": "http://toolbar.url.bi/Public/tb/images/app/_meitu_1_icon_1457425417094.jpg",
+                "imageurl": "http://toolbar.url.bi/Public/tb/images/app/_meitu_1_image_1457425411949.jpg",
+                "linktype": "0"
+            },
+            {
+                "title": "好\u201c视\u201d成双，跟着宋仲基一起\u201c撩\u201d妹吧",
+                "weblink": "http://211.136.93.44/svc/v3shipin.do?t=2&c=63",
+                "priority": 4,
+                "description": "优酷、乐视、爱奇艺视频会员通用包，北京移动用户5.6折特惠，只要28元/月",
+                "CONTENTID": "347",
+                "iconurl": "http://toolbar.url.bi/Public/tb/images/app/_icon_1458760399352.jpg",
+                "imageurl": "http://toolbar.url.bi/Public/tb/images/app/_image_1458760391499.jpg",
+                "linktype": "0"
+            }],
+            "maxprioritylist": [{
+                "title": "和视界，免费看！",
+                "weblink": "http://211.136.93.44/svc/lovev.do?t=1&c=63",
+                "priority": 1,
+                "description": "会员视频全能看，热剧连播无广告！",
+                "CONTENTID": "328",
+                "iconurl": "http://toolbar.url.bi/Public/tb/images/app/_icon_1457425243206.jpg",
+                "imageurl": "http://toolbar.url.bi/Public/tb/images/app/_image_1457425237035.jpg",
+                "linktype": "0"
+            }]
+        }
+    }
+}

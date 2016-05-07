@@ -28,35 +28,39 @@ gulp.task('build:parasitifer', function(){
         .pipe(gulp.dest('./dist'));
 });
 
-// 构建模板
-gulp.task('build:templates', function(){
-    var dest = './dist/templates/fullscreenbar',
-        js = dest + '/js';
+// JS合并构建
+gulp.task('build:concat', function(){
+    var dest = './dist/templates/fullscreenbar/js';
     gulp.src('./src/templates/js/config/**')
         .pipe($.concat('config.js'))
-        .pipe(gulp.dest(js));
+        .pipe(gulp.dest(dest));
     gulp.src('./src/templates/js/filters/**')
         .pipe($.concat('filters.js'))
-        .pipe(gulp.dest(js));
+        .pipe(gulp.dest(dest));
     gulp.src('./src/templates/js/factories/**')
         .pipe($.concat('factories.js'))
-        .pipe(gulp.dest(js));
+        .pipe(gulp.dest(dest));
     gulp.src('./src/templates/js/directives/**')
         .pipe($.concat('directives.js'))
-        .pipe(gulp.dest(js));
+        .pipe(gulp.dest(dest));
     gulp.src('./src/templates/js/services/**')
         .pipe($.concat('services.js'))
-        .pipe(gulp.dest(js));
+        .pipe(gulp.dest(dest));
     gulp.src('./src/templates/js/controllers/**')
         .pipe($.concat('controllers.js'))
-        .pipe(gulp.dest(js));
+        .pipe(gulp.dest(dest));
+});
+
+// 构建模板
+gulp.task('build:templates', function(){
+    var dest = './dist/templates/fullscreenbar';
     gulp.src([
         './src/templates/js/angular.js',
         './src/templates/js/insert.js',
         './src/templates/js/lstore.js',
         './src/templates/js/settings.js',
         './src/templates/js/ui-core.js',
-        './src/templates/js/pages/templates.js'
+        './src/templates/js/templates.js'
     ], { base: './src/templates' })
         .pipe(gulp.dest(dest));
     return gulp.src(['./src/templates/template.json', './src/templates/css/**', './src/templates/images/**'], { base: './src/templates' })
@@ -82,4 +86,4 @@ gulp.task('serve', function(){
     .on('change', browserSync.reload);
 });
 
-gulp.task('default', ['clean', 'build:doc', 'build:needle', 'build:parasitifer', 'build:templates', 'build:stub']);
+gulp.task('default', ['clean', 'build:doc', 'build:needle', 'build:parasitifer', 'build:concat', 'build:templates', 'build:stub']);
