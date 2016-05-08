@@ -1,0 +1,46 @@
+{
+    "respparam": {
+        "phoneNumber": "13488829063",
+        "messages": [{
+            "unreadmessagenumber": 0,
+            "list": [{
+                "content": "",
+                "id": "4899375",
+                "category": "0X505000",
+                "status": "1",
+                "msisdn": "13488829063",
+                "subject": "视频会员包",
+                "type": "0",
+                "date": "20160326093724"
+            },
+            {
+                "content": "",
+                "id": "3230546",
+                "category": "0X505000",
+                "status": "1",
+                "msisdn": "13488829063",
+                "subject": "泰国1999、东京1999、沙巴3999、俄罗斯6999，更多点击查看。",
+                "type": "0",
+                "date": "20160324220035"
+            },
+            {
+                "content": "",
+                "id": "3412822",
+                "category": "0X505000",
+                "status": "1",
+                "msisdn": "13488829063",
+                "subject": "健康家装盛典，百万代金卷放送，3.26日现场揭秘【全生态健康家装体系】",
+                "type": "0",
+                "date": "20160324212732"
+            }],
+            "messagenumber": 3,
+            "type": "0"
+        },
+        {
+            "unreadmessagenumber": 0,
+            "list": [],
+            "messagenumber": 0,
+            "type": "1"
+        }]
+    }
+}

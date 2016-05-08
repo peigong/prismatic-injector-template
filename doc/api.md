@@ -2,15 +2,13 @@
 
 ## 参数存疑 ##
 
-- **website：**原代码由针头脚本组装提供。
-
 **需要确定由哪个系统提供，以及参数传递机制：**
 
-- **firstAccess：**
-- **csession：**
-- **sresptime：**
-- **dayfirstflag：**
-- **firstflag：**
+- **firstAccess：**用户是否是首次访问。
+- **csession：**当前会话标识。
+- **sresptime：**系统响应时间（最重要的系统）
+- **dayfirstflag：**是否是当天首次访问
+- **firstflag：**是否是首次访问
 
 ## API通用规范 ##
 
@@ -55,14 +53,14 @@
 	}
 	
 - **displayResult：**
-- **website：**当前的宿主网站。
+- **website：**
 - **displayType：**
 - **pageId：**当前展示页面标识。
 - **templateId：**模板标识。
 - **firstAccess：**是否是首次访问。
 - **iseComp：**
 - **epageId：**
-- **taskId：**
+- **taskId：**跟踪任务标识。
 
 ### respparam 响应 ###
 
@@ -92,7 +90,7 @@
 - **templateId：**模板标识。
 - **firstAccess：**是否是首次访问。
 - **epageId：**
-- **taskId：**
+- **taskId：**跟踪任务编号。
 
 ### respparam 响应 ###
 
@@ -219,6 +217,10 @@ active流量查询。
         }
     }
 
+- **total：**总流量。
+- **used：**已用流量。
+- **dateleft：**日均可用流量。
+- **overflow：**超出流量。
 - **trafficusage.traffictime：**流量查询时间。
 - **trafficusage.traffics[].ballcolor：**？
 
@@ -407,6 +409,93 @@ active流量查询。
 
 - **unreadmessages：**未读消息的数量。
 
+## queryMessageList 接口 ##
+
+### reqparam 请求参数 ###
+
+	{
+	    "flag": "-1",
+	    "startNum": "1",
+	    "number": "10"
+	}
+
+### respparam 响应 ###
+
+	{
+        "phoneNumber": "13488829063",
+        "messages": [{
+            "unreadmessagenumber": 0,
+            "list": [{
+                "content": "",
+                "id": "4899375",
+                "category": "0X505000",
+                "status": "1",
+                "msisdn": "13488829063",
+                "subject": "视频会员包",
+                "type": "0",
+                "date": "20160326093724"
+            },
+            {
+                "content": "",
+                "id": "3230546",
+                "category": "0X505000",
+                "status": "1",
+                "msisdn": "13488829063",
+                "subject": "泰国1999、东京1999、沙巴3999、俄罗斯6999，更多点击查看。",
+                "type": "0",
+                "date": "20160324220035"
+            },
+            {
+                "content": "",
+                "id": "3412822",
+                "category": "0X505000",
+                "status": "1",
+                "msisdn": "13488829063",
+                "subject": "健康家装盛典，百万代金卷放送，3.26日现场揭秘【全生态健康家装体系】",
+                "type": "0",
+                "date": "20160324212732"
+            }],
+            "messagenumber": 3,
+            "type": "0"
+        },
+        {
+            "unreadmessagenumber": 0,
+            "list": [],
+            "messagenumber": 0,
+            "type": "1"
+        }]
+    }
+
+- **type：**信息类型。0：通知消息。1：业务消息。
+
+## queryMessageDetail 接口 ##
+
+查询消息详情。
+
+### reqparam 请求参数 ###
+
+	{
+	    "messageid":"4899375"
+	}
+
+### respparam 响应 ###
+
+待分析
+
+## deleteMessageDetail 接口 ##
+
+删除消息。
+
+### reqparam 请求参数 ###
+
+	{
+	    "messageid":"4899375"
+	}
+
+### respparam 响应 ###
+
+待分析
+
 ## contentnotification 接口 ##
 
 天天惠。
@@ -588,6 +677,46 @@ active流量查询。
 
 待分析
 
-directive:buoy:show
+# toolbarclose 接口 ##
 
-流量剩余的计算方法：remain = total - used;
+关闭广告。
+
+### reqparam 请求参数 ###
+
+	{
+	    "closeunit": "1",
+	    "cycle": "1",
+	    "interval": "0",
+	    "start": "1",
+	    "componentId": "cmineset",
+	    "isSelfOperation": "true",
+	    "pageId": "imineset",
+	    "templateId": "fullscreenbar"
+	}
+
+### respparam 响应 ###
+
+	{
+        "runstatus": "1-FFF-0-000"
+    }
+
+# gaingoldcoinchain 接口 ##
+
+伴随下载的接口。
+
+### reqparam 请求参数 ###
+
+	{
+	    "id": "1"
+	}
+
+### respparam 响应 ###
+
+	{
+        "x": "x"
+    }
+
+## 未发现接口 ##
+
+- pos
+- setting
