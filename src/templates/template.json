@@ -16,7 +16,7 @@
         "js/insert.js"
     ],
     "styles": [
-        "css/angular.css",
-        "css/components.css"
+        "css/components.css",
+        "css/angular.css"
     ]
 }
