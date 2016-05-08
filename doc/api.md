@@ -3,7 +3,14 @@
 ## 参数存疑 ##
 
 - **website：**原代码由针头脚本组装提供。
-- **firstAccess：**需要确定由哪个系统提供，以及参数传递机制。
+
+**需要确定由哪个系统提供，以及参数传递机制：**
+
+- **firstAccess：**
+- **csession：**
+- **sresptime：**
+- **dayfirstflag：**
+- **firstflag：**
 
 ## API通用规范 ##
 
