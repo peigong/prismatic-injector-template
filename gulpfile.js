@@ -34,7 +34,6 @@ gulp.task('pre-process', function(){
         .pipe(gulp.dest('./.tmp/processed'));
 });
 
-
 // 构建针头脚本
 gulp.task('build:needle', ['pre-process'], function(){
     return gulp.src('./.tmp/processed/needle.js')
@@ -117,6 +116,13 @@ gulp.task('serve', ['build:inject'], function(){
         middleware: [
             { route: '/', handle: handle },
             { route: '/index.html', handle: handle },
+            {
+                route: '/favicon.ico',
+                handle: function(req, res, next){
+                    res.end('');
+                    next();
+                }
+            }
         ],
         snippetOptions: {
             rule: {
