@@ -6,18 +6,15 @@
 
 > 需要确定由哪个系统提供，以及参数传递机制
 
-- **firstAccess：**用户是否是首次访问。
 - **csession：**当前会话标识。
 - **sresptime：**系统响应时间（最重要的系统）
+- **firstAccess：**用户是否是首次访问。
 - **dayfirstflag：**是否是当天首次访问
 - **firstflag：**是否是首次访问
 
 ### 未发现接口 ###
 
-> 以下接口存在于在待分析程序中，在前端代码梳理中，没有分析到调用。
-
-- pos
-- setting
+> `pos`接口存在于在待分析程序中，在前端代码梳理中，没有分析到调用。
 
 ### 待分析返回数据 ###
 
@@ -682,6 +679,24 @@ active流量查询。
 
 - **avgremain：**个性化设置中的，日均流量低于{avgremain}时，提醒用户。
 - **exceedpercent：**个性化设置中的，流量消耗超过百分之{avgremain}时，提醒用户。
+
+## setting 接口 ##
+
+### reqparam 请求参数 ###
+
+	{
+        "avgremain": "0",
+        "exceedpercent": "90"
+    }
+
+- **avgremain：**个性化设置中的，日均流量低于{avgremain}时，提醒用户。
+- **exceedpercent：**个性化设置中的，流量消耗超过百分之{avgremain}时，提醒用户。
+
+### respparam 响应 ###
+
+    {
+        "x": "x"
+    }
 
 ## commonpkgsub 接口 ##
 
